@@ -1,0 +1,28 @@
+@{
+    ViewData["Title"] = "Dojo Dachi Pet Game - Home Page";
+}
+<h1>Pet Game - Dojo Dachi</h1>
+<div id="Marking">
+    Fullness: [@ViewBag.Fullness] &nbsp; Happiness : [@ViewBag.Happiness]  &nbsp; Meal: [@ViewBag.Meal]  &nbsp; Energy : [@ViewBag.Energy]
+    <br/>
+</div>
+<div id="Main" style="border-style: solid; border-color: gray; width: 300px; height: 300px;">
+        @ViewBag.Happy
+        <hr style="color: red;" />
+        
+    <br/>
+</div>
+<div id="Footer">
+    <form method="POST">
+        <input type="hidden" value="@ViewBag.Fullness" name="CurFullness" />
+        <input type="hidden" value="@ViewBag.Happiness" name="CurrHappiness" />
+        <input type="hidden" value="@ViewBag.Meal" name="CurrMeal" />
+        <input type="hidden" value="@ViewBag.Energy" name="CurrEnergy" />
+        
+        <input type="submit" value="Feed" name="submit" id="submit"> &nbsp;|&nbsp; 
+        <input type="submit" value="Play" name="submit" id="submit">&nbsp;|&nbsp;
+        <input type="submit" value="Work" name="submit" id="submit">&nbsp;|&nbsp;
+        <input type="submit" value="Sleep" name="submit" id="submit">
+        <br />
+        @ViewBag.ErrorMsg
+    </form>  
